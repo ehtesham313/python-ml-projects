@@ -74,11 +74,14 @@ def run_cli():
 # Streamlit Web App Mode
 # -----------------------------------
 def run_streamlit():
-    st.set_page_config(
-        page_title="Cricket Score Predictor",
-        page_icon="🏏",
-        layout="centered"
-    )
+    try:
+        st.set_page_config(
+            page_title="Cricket Score Predictor",
+            page_icon="🏏",
+            layout="centered"
+        )
+    except Exception:
+        pass
 
     st.title("🏏 Cricket Score Prediction App")
     st.write("Predict the estimated final score of a cricket match based on current match conditions.")
