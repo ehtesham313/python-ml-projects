@@ -131,11 +131,14 @@ def run_cli():
 # Streamlit Web App Mode
 # -----------------------------------
 def run_streamlit():
-    st.set_page_config(
-        page_title="Diabetes Awareness Chatbot & Risk Predictor",
-        page_icon="🩺",
-        layout="centered"
-    )
+    try:
+        st.set_page_config(
+            page_title="Diabetes Awareness Chatbot & Risk Predictor",
+            page_icon="🩺",
+            layout="centered"
+        )
+    except Exception:
+        pass
 
     st.title("🩺 Diabetes Awareness & Health Hub")
     st.write("An interactive AI assistant and Machine Learning risk assessment tool for diabetes awareness and prevention.")
