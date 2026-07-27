@@ -67,11 +67,14 @@ def run_cli():
 # Streamlit Web App Mode
 # -----------------------------------
 def run_streamlit():
-    st.set_page_config(
-        page_title="Email Spam Detection",
-        page_icon="📧",
-        layout="centered"
-    )
+    try:
+        st.set_page_config(
+            page_title="Email Spam Detection",
+            page_icon="📧",
+            layout="centered"
+        )
+    except Exception:
+        pass
 
     st.title("📧 Email Spam Detector")
     st.write("Enter an email subject or message body to classify it as **Spam** or **Legitimate (Ham)** using NLP Machine Learning.")
